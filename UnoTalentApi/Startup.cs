@@ -35,9 +35,11 @@ namespace UnoTalentApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IApiService<User>, UserService>();
+
             var connection = @"Server=(localdb)\mssqllocaldb;Database=UnoTalent.Db;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<UnoTalentDbContext>
                 (options => options.UseSqlServer(connection));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
