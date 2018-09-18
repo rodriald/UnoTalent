@@ -4,8 +4,10 @@ using System.Text;
 
 namespace UnoTalent.Service.Mappers.Abstractions
 {
-    class IMapper<TEntity, PModel>
+    public abstract class IMapper<TEntity, PModel>
     {
+        public abstract TEntity Map(PModel entity);
 
+        public abstract PModel Map(TEntity entity);
     }
 }

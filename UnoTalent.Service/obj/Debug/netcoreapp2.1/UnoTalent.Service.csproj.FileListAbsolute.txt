@@ -1,0 +1,12 @@
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\bin\Debug\netcoreapp2.1\UnoTalent.Service.deps.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\bin\Debug\netcoreapp2.1\UnoTalent.Service.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\bin\Debug\netcoreapp2.1\UnoTalent.Service.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\bin\Debug\netcoreapp2.1\UnoTalent.Data.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\bin\Debug\netcoreapp2.1\UnoTalent.Data.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.csproj.CopyComplete
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Service\obj\Debug\netcoreapp2.1\UnoTalent.Service.pdb
