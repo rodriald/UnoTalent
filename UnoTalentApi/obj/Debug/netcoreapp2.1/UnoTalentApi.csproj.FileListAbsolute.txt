@@ -1,0 +1,14 @@
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalentApi.deps.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalentApi.runtimeconfig.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalentApi.runtimeconfig.dev.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalentApi.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalentApi.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.RazorAssemblyInfo.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.RazorAssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.RazorTargetAssemblyInfo.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.pdb
