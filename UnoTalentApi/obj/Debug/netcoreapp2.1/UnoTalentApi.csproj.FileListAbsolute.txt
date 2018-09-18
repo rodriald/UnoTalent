@@ -12,3 +12,8 @@ C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netc
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.RazorTargetAssemblyInfo.cache
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.dll
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalent.Data.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalent.Service.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalent.Data.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\bin\Debug\netcoreapp2.1\UnoTalent.Service.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalentApi\obj\Debug\netcoreapp2.1\UnoTalentApi.csproj.CopyComplete

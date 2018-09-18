@@ -1,0 +1,14 @@
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\UnoTalent.Tests.deps.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\UnoTalent.Tests.runtimeconfig.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\UnoTalent.Tests.runtimeconfig.dev.json
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\UnoTalent.Tests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\bin\Debug\netcoreapp2.1\UnoTalent.Tests.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.csprojAssemblyReference.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.csproj.CoreCompileInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.AssemblyInfoInputs.cache
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.AssemblyInfo.cs
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.dll
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.pdb
