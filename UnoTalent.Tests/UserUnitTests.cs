@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace UnoTalent.Tests
+﻿namespace UnoTalent.Tests
 {
     public class UserUnitTests
     {

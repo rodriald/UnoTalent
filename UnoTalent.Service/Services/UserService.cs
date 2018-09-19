@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnoTalent.Service.Services.Abstractions;
 using UnoTalent.Data.Entities;
 using UnoTalent.Data;

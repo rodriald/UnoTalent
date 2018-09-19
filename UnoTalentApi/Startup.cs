@@ -11,12 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using UnoTalent.Data;
 using UnoTalent.Data.Entities;
-using UnoTalent.Service;
-using Microsoft.EntityFrameworkCore;
 using UnoTalent.Service.Services.Abstractions;
 using UnoTalent.Service.Services;
 
