@@ -2,7 +2,7 @@
 
 namespace UnoTalent.Service.Models
 {
-    public class User : IEntity
+    public class UserVm : IEntity
     {
         public override int Id { get; set; }
         public string Name { get; set; }

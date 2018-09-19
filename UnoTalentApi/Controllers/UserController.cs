@@ -1,14 +1,15 @@
 ﻿using UnoTalent.Service.Services.Abstractions;
 using UnoTalent.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using UnoTalent.Service.Models;
 
 namespace UnoTalentApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ApiController<UnoTalent.Service.Models.User>
+    public class UserController : ApiController<UserVm>
     {
-        public UserController(IApiService<UnoTalent.Service.Models.User> apiService) : base(apiService)
+        public UserController(IApiService<UserVm> apiService) : base(apiService)
         {
         }
     }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnoTalent.Data;
 using UnoTalent.Data.Entities.Abstractions;
 using UnoTalent.Service.Mappers.Abstractions;
@@ -27,7 +25,7 @@ namespace UnoTalent.Service.Services.Abstractions
             return newItem.Id;
         }
 
-        public TModel Delete(long id)
+        public TModel Delete(int id)
         {
             TEntity item = _context.Set<TEntity>().Find(id);
             if (item == null)
@@ -46,12 +44,12 @@ namespace UnoTalent.Service.Services.Abstractions
             return _mapper.Map(_context.Set<TEntity>().ToList());
         }
 
-        public TModel GetById(long id)
+        public TModel GetById(int id)
         {
             return _mapper.Map(_context.Set<TEntity>().Find(id));
         }
 
-        public TModel Update(long id, TModel item)
+        public TModel Update(int id, TModel item)
         {
             TEntity oldItem = _context.Set<TEntity>().Find(id);
 

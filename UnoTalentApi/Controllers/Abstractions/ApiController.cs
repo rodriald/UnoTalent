@@ -33,7 +33,7 @@ namespace UnoTalentApi.Controllers
         [HttpPost]
         public virtual IActionResult Post(TModel item)
         {
-            long itemId = _apiService.Create(item);
+            int itemId = _apiService.Create(item);
             return Ok();
         }
 

@@ -6,9 +6,9 @@ namespace UnoTalent.Service.Services.Abstractions
     {
         List<TModel> GetAll();
 
-        TModel GetById(long id);
+        TModel GetById(int id);
         int Create(TModel item);
-        TModel Delete(long id);
-        TModel Update(long id, TModel item);
+        TModel Delete(int id);
+        TModel Update(int id, TModel item);
     }
 }
