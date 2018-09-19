@@ -1,9 +1,12 @@
-﻿namespace UnoTalent.Data.Entities.Abstractions
+﻿using UnoTalent.Data.Entities.Abstractions;
+
+namespace UnoTalent.Data.Entities
 {
-    class Candidate : IEntity
+
+    public class Candidate : IEntity
     {
         public override int Id { get; set; }
         public string Name { get; set; }
-        public int ApplicationId { get; set; }
+        public Application Application { get; set; }
     }
 }

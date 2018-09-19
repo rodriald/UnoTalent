@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnoTalent.Data.Entities.Abstractions;
 
 namespace UnoTalent.Data.Entities
 {
-    class Category : IEntity
+    public class Category : IEntity
     {
         public override int Id { get; set; }
         public string Name { get; set; }

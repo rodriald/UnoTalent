@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UnoTalent.Data;
 
 namespace UnoTalentApi.Migrations
 {
     [DbContext(typeof(UnoTalentDbContext))]
-    partial class UnoTalentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180919222304_BasicEntities")]
+    partial class BasicEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
