@@ -14,6 +14,6 @@ namespace UnoTalent.Data
         public DbSet<Question> Questions{ get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<Category> Categories { get; set; }
-        //public DbSet<ApplicationQuestion> ApplicationQuestions { get; set; }
+        public DbSet<ApplicationQuestion> ApplicationQuestions { get; set; }
     }
 }

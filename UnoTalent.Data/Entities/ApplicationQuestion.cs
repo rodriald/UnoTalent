@@ -3,7 +3,7 @@
     public class ApplicationQuestion
     {
         public int Id { get; set; }
-        public int? ApplicationId { get; set; }
-        public int? QuestionId { get; set; }
+        public Application Application { get; set; }
+        public Question Question { get; set; }
     }
 }
