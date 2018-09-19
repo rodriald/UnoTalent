@@ -2,13 +2,13 @@
 
 namespace UnoTalent.Service.Services.Abstractions
 {
-    public interface IApiService<T>
+    public interface IApiService<TModel>
     {
-        List<T> GetAll();
+        List<TModel> GetAll();
 
-        T GetById(long id);
-        int Create(T item);
-        T Delete(long id);
-        T Update(long id, T item);
+        TModel GetById(long id);
+        int Create(TModel item);
+        TModel Delete(long id);
+        TModel Update(long id, TModel item);
     }
 }
