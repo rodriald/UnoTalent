@@ -6,7 +6,7 @@ using UnoTalent.Service.Models;
 
 namespace UnoTalent.Service.Services
 {
-    class ApplicationService : ApiService<Application, ApplicationVm>
+    public class ApplicationService : ApiService<Application, ApplicationVm>
     {
         public ApplicationService(IMapper<Application, ApplicationVm> mapper, UnoTalentDbContext context) : base(mapper, context)
         {

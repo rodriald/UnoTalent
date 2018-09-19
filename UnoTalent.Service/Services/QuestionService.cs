@@ -9,7 +9,7 @@ using UnoTalent.Service.Services.Abstractions;
 
 namespace UnoTalent.Service.Services
 {
-    class QuestionService : ApiService<Question, QuestionVm>
+    public class QuestionService : ApiService<Question, QuestionVm>
     {
         public QuestionService(IMapper<Question, QuestionVm> mapper, UnoTalentDbContext context) : base(mapper, context)
         {

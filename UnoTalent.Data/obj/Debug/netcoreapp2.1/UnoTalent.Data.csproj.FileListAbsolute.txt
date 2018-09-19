@@ -6,3 +6,4 @@ C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Data\obj\Debug\ne
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Data\obj\Debug\netcoreapp2.1\UnoTalent.Data.AssemblyInfo.cs
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Data\obj\Debug\netcoreapp2.1\UnoTalent.Data.dll
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Data\obj\Debug\netcoreapp2.1\UnoTalent.Data.pdb
+C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Data\obj\Debug\netcoreapp2.1\UnoTalent.Data.csprojAssemblyReference.cache

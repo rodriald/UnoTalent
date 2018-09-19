@@ -5,7 +5,7 @@ using UnoTalent.Service.Models;
 
 namespace UnoTalent.Service.Mappers
 {
-    class CategoryMapper : IMapper<Category, CategoryVm>
+    public class CategoryMapper : IMapper<Category, CategoryVm>
     {
         public Category Map(CategoryVm model)
         {

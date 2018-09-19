@@ -7,7 +7,7 @@ using UnoTalent.Service.Models;
 
 namespace UnoTalent.Service.Mappers
 {
-    class ApplicationMapper : IMapper<Application, ApplicationVm>
+    public class ApplicationMapper : IMapper<Application, ApplicationVm>
     {
         public Application Map(ApplicationVm model)
         {

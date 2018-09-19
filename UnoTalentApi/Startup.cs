@@ -28,7 +28,16 @@ namespace UnoTalentApi
         {
 
             services.AddScoped<IMapper<User, UserVm>, UserMapper>();
+            services.AddScoped<IMapper<Application, ApplicationVm>, ApplicationMapper>();
+            services.AddScoped<IMapper<Question, QuestionVm>, QuestionMapper>();
+            services.AddScoped<IMapper<Category, CategoryVm>, CategoryMapper>();
+            services.AddScoped<IMapper<Candidate, CandidateVm>, CandidateMapper>();
+
             services.AddScoped<IApiService<UserVm>, UserService>();
+            services.AddScoped<IApiService<ApplicationVm>, ApplicationService>();
+            services.AddScoped<IApiService<QuestionVm>, QuestionService>();
+            services.AddScoped<IApiService<CategoryVm>, CategoryService>();
+            services.AddScoped<IApiService<CandidateVm>, CandidateService>();
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=UnoTalent.Db;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<UnoTalentDbContext>
