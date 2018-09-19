@@ -2,7 +2,7 @@
 
 namespace UnoTalent.Service.Models
 {
-    public class ApplicationQuestion
+    public class ApplicationQuestionVm
     {
         public int Id { get; set; }
         public Application Application { get; set; }

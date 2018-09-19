@@ -6,7 +6,7 @@ using UnoTalent.Data.Entities.Abstractions;
 
 namespace UnoTalent.Service.Models
 {
-    public class Question : IEntity
+    public class QuestionVm : IEntity
     {
         public override int Id { get; set; }
         public Category Category { get; set; }
