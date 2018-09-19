@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UnoTalent.Data;
 
-namespace UnoTalent.Data.Migrations
+namespace UnoTalentApi.Migrations
 {
     [DbContext(typeof(UnoTalentDbContext))]
     partial class UnoTalentDbContextModelSnapshot : ModelSnapshot

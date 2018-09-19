@@ -15,6 +15,8 @@ using UnoTalent.Data;
 using UnoTalent.Data.Entities;
 using UnoTalent.Service.Services.Abstractions;
 using UnoTalent.Service.Services;
+using UnoTalent.Service.Mappers;
+using UnoTalent.Service.Mappers.Abstractions;
 
 namespace UnoTalentApi
 {
@@ -30,11 +32,12 @@ namespace UnoTalentApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IApiService<User>, UserService>();
 
+            services.AddScoped<IMapper<User,UnoTalent.Service.Models.User>, UserMapper>();
+            services.AddScoped<IApiService<UnoTalent.Service.Models.User>, UserService>();
             var connection = @"Server=(localdb)\mssqllocaldb;Database=UnoTalent.Db;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<UnoTalentDbContext>
-                (options => options.UseSqlServer(connection));
+                (options => options.UseSqlServer(connection, b => b.MigrationsAssembly("UnoTalentApi")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

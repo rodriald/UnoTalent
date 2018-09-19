@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace UnoTalent.Data.Migrations
+namespace UnoTalentApi.Migrations
 {
-    public partial class UserTable : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

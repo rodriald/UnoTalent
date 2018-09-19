@@ -1,25 +1,26 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using UnoTalent.Data.Entities.Abstractions;
 using UnoTalent.Service.Services.Abstractions;
 
 namespace UnoTalentApi.Controllers
 {
-    public class ApiController<T> : ControllerBase
+    public class ApiController<TModel> : ControllerBase where TModel : IEntity
     {
-        private readonly IApiService<T> _apiService;
+        private readonly IApiService<TModel> _apiService;
 
-        public ApiController(IApiService<T> apiService) {
+        public ApiController(IApiService<TModel> apiService) {
             _apiService = apiService;
         }
 
         [HttpGet]
-        public virtual ActionResult<List<T>> Get()
+        public virtual ActionResult<List<TModel>> Get()
         {
             return _apiService.GetAll();
         }
 
         [HttpGet("{id}")]
-        public virtual ActionResult<T> Get(int id)
+        public virtual ActionResult<TModel> Get(int id)
         {
             var item = _apiService.GetById(id);
             if (item == null)
@@ -30,14 +31,14 @@ namespace UnoTalentApi.Controllers
         }
 
         [HttpPost]
-        public virtual IActionResult Post(T item)
+        public virtual IActionResult Post(TModel item)
         {
             long itemId = _apiService.Create(item);
             return Ok();
         }
 
         [HttpPut("{id}")]
-        public virtual IActionResult Put(int id, T item)
+        public virtual IActionResult Put(int id, TModel item)
         {
             var oldItem = _apiService.GetById(id);
             if (oldItem == null)

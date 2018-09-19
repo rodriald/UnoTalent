@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UnoTalent.Data;
 
-namespace UnoTalent.Data.Migrations
+namespace UnoTalentApi.Migrations
 {
     [DbContext(typeof(UnoTalentDbContext))]
-    [Migration("20180918214440_UserTable")]
-    partial class UserTable
+    [Migration("20180919153509_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
