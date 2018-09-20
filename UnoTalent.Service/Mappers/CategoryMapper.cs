@@ -10,7 +10,6 @@ namespace UnoTalent.Service.Mappers
         public Category Map(CategoryVm model)
         {
             Category category = new Category();
-            category.Id = model.Id;
             category.Name = model.Name;
             return category;
         }
@@ -20,6 +19,10 @@ namespace UnoTalent.Service.Mappers
             CategoryVm category = new CategoryVm();
             category.Id = entity.Id;
             category.Name = entity.Name;
+
+            IMapper<Question, QuestionVm> mapper = new QuestionMapper();
+            category.Questions = mapper.Map(entity.Questions);
+
             return category;
         }
 

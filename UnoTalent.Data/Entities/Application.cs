@@ -4,7 +4,8 @@ namespace UnoTalent.Data.Entities
 {
     public class Application : IEntity
     {
-        public override int Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
+        public Candidate Candidate { get; set; }
     }
 }

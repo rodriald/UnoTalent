@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using UnoTalent.Data.Entities;
 using UnoTalent.Service.Mappers.Abstractions;
 using UnoTalent.Service.Models;
@@ -22,6 +20,14 @@ namespace UnoTalent.Service.Mappers
             ApplicationVm application = new ApplicationVm();
             application.Id = entity.Id;
             application.Name = entity.Name;
+            application.Questions = new List<QuestionVm>();
+
+            if (entity.Candidate != null)
+            {
+                IMapper<Candidate, CandidateVm> mapper = new CandidateMapper();
+                application.Candidate = mapper.Map(entity.Candidate);
+            }
+
             return application;
         }
 

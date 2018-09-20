@@ -5,7 +5,7 @@ using UnoTalent.Service.Services.Abstractions;
 
 namespace UnoTalentApi.Controllers
 {
-    public class ApiController<TModel> : ControllerBase where TModel : IEntity
+    public class ApiController<TModel> : ControllerBase where TModel : class
     {
         private readonly IApiService<TModel> _apiService;
 

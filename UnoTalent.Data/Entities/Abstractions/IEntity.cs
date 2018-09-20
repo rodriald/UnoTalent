@@ -1,7 +1,7 @@
 ﻿namespace UnoTalent.Data.Entities.Abstractions
 {
-    public abstract class IEntity
+    public interface IEntity
     {
-        abstract public int Id { get; set; }
+        int Id { get; set; }
     }
 }

@@ -11,4 +11,3 @@ C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\n
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.AssemblyInfo.cs
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.dll
 C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.pdb
-C:\Users\aldo.rodriguez\Documents\Projects\UnoTalent\UnoTalent.Tests\obj\Debug\netcoreapp2.1\UnoTalent.Tests.csprojAssemblyReference.cache

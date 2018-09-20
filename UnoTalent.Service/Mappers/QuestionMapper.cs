@@ -13,7 +13,6 @@ namespace UnoTalent.Service.Mappers
         {
             Question question = new Question();
             question.Id = model.Id;
-            question.Category = model.Category;
             question.CandidateQuestion = model.CandidateQuestion;
             return question;
         }
@@ -23,6 +22,7 @@ namespace UnoTalent.Service.Mappers
             QuestionVm question = new QuestionVm();
             question.Id = entity.Id;
             question.CandidateQuestion = entity.CandidateQuestion;
+            
             return question;
         }
 
@@ -45,7 +45,7 @@ namespace UnoTalent.Service.Mappers
             List<QuestionVm> questions = new List<QuestionVm>();
             foreach (Question question in entities)
             {
-                QuestionVm newQuestion = new QuestionVm();
+                var newQuestion = new QuestionVm();
                 newQuestion.Id = question.Id;
                 newQuestion.CandidateQuestion = question.CandidateQuestion;
                 questions.Add(newQuestion);

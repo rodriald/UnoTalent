@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UnoTalent.Data;
 
 namespace UnoTalentApi.Migrations
 {
     [DbContext(typeof(UnoTalentDbContext))]
-    partial class UnoTalentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180920205405_BasicSchema")]
+    partial class BasicSchema
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,11 +55,20 @@ namespace UnoTalentApi.Migrations
 
             modelBuilder.Entity("UnoTalent.Data.Entities.Candidate", b =>
                 {
-                    b.Property<int>("Id");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Aplication");
+
+                    b.Property<int>("ApplicationId");
 
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Aplication")
+                        .IsUnique();
 
                     b.ToTable("Candidates");
                 });
@@ -120,7 +131,7 @@ namespace UnoTalentApi.Migrations
                 {
                     b.HasOne("UnoTalent.Data.Entities.Application", "Application")
                         .WithOne("Candidate")
-                        .HasForeignKey("UnoTalent.Data.Entities.Candidate", "Id")
+                        .HasForeignKey("UnoTalent.Data.Entities.Candidate", "Aplication")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

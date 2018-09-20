@@ -13,7 +13,7 @@ namespace UnoTalent.Service.Services
     {
         public QuestionService(IMapper<Question, QuestionVm> mapper, UnoTalentDbContext context) : base(mapper, context)
         {
-
+            
         }
     }
 }

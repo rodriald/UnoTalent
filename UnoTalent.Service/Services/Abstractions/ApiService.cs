@@ -3,13 +3,16 @@ using UnoTalent.Data;
 using UnoTalent.Data.Entities.Abstractions;
 using UnoTalent.Service.Mappers.Abstractions;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace UnoTalent.Service.Services.Abstractions
 {
-    public class ApiService<TEntity, TModel> : IApiService<TModel> where TEntity : IEntity where TModel : IEntity
+    public class ApiService<TEntity, TModel> : IApiService<TModel>
+        where TEntity : class, IEntity
+        where TModel : class
     {
-        private IMapper<TEntity, TModel> _mapper;
-        private UnoTalentDbContext _context;
+        protected IMapper<TEntity, TModel> _mapper;
+        protected UnoTalentDbContext _context;
 
         public ApiService(IMapper<TEntity, TModel> mapper, UnoTalentDbContext context)
         {
@@ -17,52 +20,48 @@ namespace UnoTalent.Service.Services.Abstractions
             _context = context;
         }
 
-        public int Create(TModel item)
+        public virtual int Create(TModel item)
         {
-            TEntity newItem = _mapper.Map(item);
+            var newItem = _mapper.Map(item);
             _context.Set<TEntity>().Add(newItem);
             _context.SaveChanges();
-            return newItem.Id;
+            var ret = typeof(TEntity).GetProperty("Id").GetValue(newItem);
+            return (int) ret;
         }
 
-        public TModel Delete(int id)
+        public virtual TModel Delete(int id)
         {
             TEntity item = _context.Set<TEntity>().Find(id);
             if (item == null)
             {
-                return default(TModel);
+                return null;
             }
 
-            _context.Set<IEntity>().Remove(item);
+            _context.Set<TEntity>().Remove(item);
             _context.SaveChanges();
 
             return _mapper.Map(item);
         }
 
-        public List<TModel> GetAll()
+        public virtual List<TModel> GetAll()
         {
-            return _mapper.Map(_context.Set<TEntity>().ToList());
+            var entities =_context.Set<TEntity>().ToList();
+            return _mapper.Map(entities);
         }
 
-        public TModel GetById(int id)
+        public virtual TModel GetById(int id)
         {
             return _mapper.Map(_context.Set<TEntity>().Find(id));
         }
 
-        public TModel Update(int id, TModel item)
+        public virtual TModel Update(int id, TModel item)
         {
-            TEntity oldItem = _context.Set<TEntity>().Find(id);
+            TEntity newItem = _mapper.Map(item);
+            newItem.Id = id;
 
-            if (oldItem == null)
-            {
-                return default(TModel);
-            }
-
-            item.Id = oldItem.Id;
-
-            _context.Set<IEntity>().Update(_mapper.Map(item));
+            _context.Set<TEntity>().Update(newItem);
             _context.SaveChanges();
-            return item;
+            return _mapper.Map(newItem);
         }
     }
 }

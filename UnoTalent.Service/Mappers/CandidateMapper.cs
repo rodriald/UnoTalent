@@ -14,7 +14,6 @@ namespace UnoTalent.Service.Mappers
             Candidate candidate = new Candidate();
             candidate.Id = model.Id;
             candidate.Name = model.Name;
-            candidate.Application = model.Application;
             return candidate;
         }
 
@@ -23,7 +22,6 @@ namespace UnoTalent.Service.Mappers
             CandidateVm candidate = new CandidateVm();
             candidate.Id = entity.Id;
             candidate.Name = entity.Name;
-            candidate.Application = entity.Application;
             return candidate;
         }
 
@@ -35,7 +33,6 @@ namespace UnoTalent.Service.Mappers
                 Candidate newCandidate = new Candidate();
                 newCandidate.Id = candidate.Id;
                 newCandidate.Name = candidate.Name;
-                newCandidate.Application = candidate.Application;
                 candidates.Add(newCandidate);
             }
 
@@ -50,7 +47,6 @@ namespace UnoTalent.Service.Mappers
                 CandidateVm newCandidate = new CandidateVm();
                 newCandidate.Id = candidate.Id;
                 newCandidate.Name = candidate.Name;
-                newCandidate.Application = candidate.Application;
                 candidates.Add(newCandidate);
             }
 
