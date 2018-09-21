@@ -12,10 +12,5 @@ namespace UnoTalent.Service.Services
         {
             
         }
-
-        public override CandidateVm GetById(int id)
-        {
-            return base.GetById(id);
-        }
     }
 }

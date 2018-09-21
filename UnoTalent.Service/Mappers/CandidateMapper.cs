@@ -46,10 +46,5 @@ namespace UnoTalent.Service.Mappers
 
             return candidates;
         }
-
-        public Candidate Map(Candidate entity, CandidateVm model)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -22,8 +22,7 @@ namespace UnoTalent.Service.Mappers
         {
             ApplicationQuestion question = new ApplicationQuestion();
 
-            IMapper<Question, QuestionVm> mapper = new QuestionMapper();
-            question.Question = mapper.Map(model.Question);
+            question.Question = _questionMapper.Map(model.Question);
 
             question.Application = _applicationMapper.Map(model.Application);
 
@@ -35,8 +34,7 @@ namespace UnoTalent.Service.Mappers
             ApplicationQuestionVm question = new ApplicationQuestionVm();
             question.Id = entity.Id;
 
-            IMapper<Question, QuestionVm> mapper = new QuestionMapper();
-            question.Question = mapper.Map(entity.Question);
+            question.Question = _questionMapper.Map(entity.Question);
 
             question.Application = _applicationMapper.Map(entity.Application);
             return question;
@@ -62,11 +60,6 @@ namespace UnoTalent.Service.Mappers
             }
 
             return questions;
-        }
-
-        public ApplicationQuestion Map(ApplicationQuestion entity, ApplicationQuestionVm model)
-        {
-            throw new NotImplementedException();
         }
     }
 }

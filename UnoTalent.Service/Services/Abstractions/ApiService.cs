@@ -56,7 +56,6 @@ namespace UnoTalent.Service.Services.Abstractions
 
         public virtual TModel Update(int id, TModel item)
         {
-            //var entity = _context.Set<TEntity>().Find(id);
             var entity = _mapper.Map(item);
             entity.Id = id;
             _context.Set<TEntity>().Update(entity);

@@ -5,6 +5,7 @@ using UnoTalent.Data;
 using System.Linq;
 using UnoTalent.Service.Mappers.Abstractions;
 using UnoTalent.Service.Models;
+using System.Collections.Generic;
 
 namespace UnoTalent.Service.Services
 {
@@ -24,6 +25,16 @@ namespace UnoTalent.Service.Services
             var application = _mapper.Map(entity);
 
             return application;
+        }
+
+        public override List<ApplicationVm> GetAll()
+        {
+            var entities = _context.Applications.Include(x => x.Candidate)
+                .Include(x => x.ApplicationQuestions)
+                    .ThenInclude(x => x.Question)
+                .ToList();
+
+            return _mapper.Map(entities);
         }
     }
 }

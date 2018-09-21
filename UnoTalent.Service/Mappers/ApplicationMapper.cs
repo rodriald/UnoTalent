@@ -37,16 +37,15 @@ namespace UnoTalent.Service.Mappers
             application.Questions = new List<QuestionVm>();
             if (entity.ApplicationQuestions != null)
             {
-                foreach (var question in entity.ApplicationQuestions)
+                foreach (var applicationQuestion  in entity.ApplicationQuestions)
                 {
-                    application.Questions.Add(_questionMapper.Map(question.Question));
+                    application.Questions.Add(_questionMapper.Map(applicationQuestion.Question));
                 }
             }
 
             if (entity.Candidate != null)
             {
-                IMapper<Candidate, CandidateVm> mapper = new CandidateMapper();
-                application.Candidate = mapper.Map(entity.Candidate);
+                application.Candidate = _candidateMapper.Map(entity.Candidate);
             }
 
             return application;
@@ -72,16 +71,6 @@ namespace UnoTalent.Service.Mappers
             }
 
             return applications;
-        }
-
-        public Application Map(Application entity, ApplicationVm model) {
-            entity.Name = model.Name;
-
-            if (model.Candidate != null) {
-                IMapper<Candidate, CandidateVm> mapper = new CandidateMapper();
-                entity.Candidate = mapper.Map(model.Candidate);
-            }
-            return entity;
         }
     }
 }

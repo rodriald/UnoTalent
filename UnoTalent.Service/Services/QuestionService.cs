@@ -17,12 +17,5 @@ namespace UnoTalent.Service.Services
         {
             
         }
-
-        public override QuestionVm GetById(int id)
-        {
-            var entity = _context.Questions.Find(id);
-
-            return _mapper.Map(entity);
-        }
     }
 }
