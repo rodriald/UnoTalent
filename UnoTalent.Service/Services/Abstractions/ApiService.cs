@@ -25,8 +25,8 @@ namespace UnoTalent.Service.Services.Abstractions
             var newItem = _mapper.Map(item);
             _context.Set<TEntity>().Add(newItem);
             _context.SaveChanges();
-            var ret = typeof(TEntity).GetProperty("Id").GetValue(newItem);
-            return (int) ret;
+
+            return (int) newItem.Id;
         }
 
         public virtual TModel Delete(int id)
@@ -45,7 +45,7 @@ namespace UnoTalent.Service.Services.Abstractions
 
         public virtual List<TModel> GetAll()
         {
-            var entities =_context.Set<TEntity>().ToList();
+            var entities =_context.Set<TEntity>().AsNoTracking().ToList();
             return _mapper.Map(entities);
         }
 
@@ -56,12 +56,12 @@ namespace UnoTalent.Service.Services.Abstractions
 
         public virtual TModel Update(int id, TModel item)
         {
-            TEntity newItem = _mapper.Map(item);
-            newItem.Id = id;
-
-            _context.Set<TEntity>().Update(newItem);
+            //var entity = _context.Set<TEntity>().Find(id);
+            var entity = _mapper.Map(item);
+            entity.Id = id;
+            _context.Set<TEntity>().Update(entity);
             _context.SaveChanges();
-            return _mapper.Map(newItem);
+            return _mapper.Map(entity);
         }
     }
 }

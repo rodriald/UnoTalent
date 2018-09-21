@@ -7,6 +7,13 @@ namespace UnoTalent.Service.Mappers
 {
     public class CategoryMapper : IMapper<Category, CategoryVm>
     {
+        private readonly IMapper<Question, QuestionVm> _questionMapper;
+
+        public CategoryMapper(IMapper<Question, QuestionVm> questionMapper)
+        {
+            _questionMapper = questionMapper;
+        }
+
         public Category Map(CategoryVm model)
         {
             Category category = new Category();
@@ -24,8 +31,7 @@ namespace UnoTalent.Service.Mappers
 
             if (entity.Questions != null)
             {
-                IMapper<Question, QuestionVm> mapper = new QuestionMapper();
-                category.Questions = mapper.Map(entity.Questions);
+                category.Questions = _questionMapper.Map(entity.Questions);
             }
             return category;
         }

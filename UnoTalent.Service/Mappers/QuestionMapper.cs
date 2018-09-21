@@ -47,5 +47,10 @@ namespace UnoTalent.Service.Mappers
 
             return questions;
         }
+
+        public Question Map(Question entity, QuestionVm model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

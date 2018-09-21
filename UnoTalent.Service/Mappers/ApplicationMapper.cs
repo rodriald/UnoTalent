@@ -7,11 +7,22 @@ namespace UnoTalent.Service.Mappers
 {
     public class ApplicationMapper : IMapper<Application, ApplicationVm>
     {
+        private readonly IMapper<Candidate, CandidateVm> _candidateMapper;
+
+        public ApplicationMapper(IMapper<Candidate, CandidateVm> candidateMapper)
+        {
+            _candidateMapper = candidateMapper;
+        }
+
         public Application Map(ApplicationVm model)
         {
             Application application = new Application();
             application.Id = model.Id;
             application.Name = model.Name;
+
+            if (application.Candidate != null) {
+                application.Candidate = _candidateMapper.Map(model.Candidate);
+            }
             return application;
         }
 
@@ -51,6 +62,16 @@ namespace UnoTalent.Service.Mappers
             }
 
             return applications;
+        }
+
+        public Application Map(Application entity, ApplicationVm model) {
+            entity.Name = model.Name;
+
+            if (model.Candidate != null) {
+                IMapper<Candidate, CandidateVm> mapper = new CandidateMapper();
+                entity.Candidate = mapper.Map(model.Candidate);
+            }
+            return entity;
         }
     }
 }

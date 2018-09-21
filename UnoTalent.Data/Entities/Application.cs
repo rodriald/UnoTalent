@@ -1,4 +1,5 @@
-﻿using UnoTalent.Data.Entities.Abstractions;
+﻿using System.Collections.Generic;
+using UnoTalent.Data.Entities.Abstractions;
 
 namespace UnoTalent.Data.Entities
 {
@@ -7,5 +8,7 @@ namespace UnoTalent.Data.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public Candidate Candidate { get; set; }
+
+        public List<ApplicationQuestion> ApplicationQuestions { get; set; }
     }
 }

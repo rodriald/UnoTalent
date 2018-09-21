@@ -40,12 +40,6 @@ namespace UnoTalentApi.Controllers
         [HttpPut("{id}")]
         public virtual IActionResult Put(int id, TModel item)
         {
-            var oldItem = _apiService.GetById(id);
-            if (oldItem == null)
-            {
-                return NotFound();
-            }
-
             _apiService.Update(id, item);
 
             return NoContent();

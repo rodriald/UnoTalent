@@ -43,5 +43,10 @@ namespace UnoTalent.Service.Mappers
 
             return users;
         }
+
+        public User Map(User entity, UserVm model)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

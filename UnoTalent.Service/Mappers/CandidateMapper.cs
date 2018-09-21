@@ -30,10 +30,7 @@ namespace UnoTalent.Service.Mappers
             List<Candidate> candidates = new List<Candidate>();
             foreach (CandidateVm candidate in models)
             {
-                Candidate newCandidate = new Candidate();
-                newCandidate.Id = candidate.Id;
-                newCandidate.Name = candidate.Name;
-                candidates.Add(newCandidate);
+                candidates.Add(Map(candidate));
             }
 
             return candidates;
@@ -44,13 +41,15 @@ namespace UnoTalent.Service.Mappers
             List<CandidateVm> candidates = new List<CandidateVm>();
             foreach (Candidate candidate in entities)
             {
-                CandidateVm newCandidate = new CandidateVm();
-                newCandidate.Id = candidate.Id;
-                newCandidate.Name = candidate.Name;
-                candidates.Add(newCandidate);
+                candidates.Add(Map(candidate));
             }
 
             return candidates;
+        }
+
+        public Candidate Map(Candidate entity, CandidateVm model)
+        {
+            throw new NotImplementedException();
         }
     }
 }
