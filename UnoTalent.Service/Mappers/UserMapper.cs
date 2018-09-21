@@ -27,10 +27,7 @@ namespace UnoTalent.Service.Mappers
         {
             List<User> users = new List<User>();
             foreach (UserVm user in models) {
-                User newUser = new User();
-                newUser.Id = user.Id;
-                newUser.Name = user.Name;
-                users.Add(newUser);
+                users.Add(Map(user));
             }
 
             return users;
@@ -41,10 +38,7 @@ namespace UnoTalent.Service.Mappers
             List<UserVm> users = new List<UserVm>();
             foreach (User user in entities)
             {
-                UserVm newUser = new UserVm();
-                newUser.Id = user.Id;
-                newUser.Name = user.Name;
-                users.Add(newUser);
+                users.Add(Map(user));
             }
 
             return users;
