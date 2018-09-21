@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnoTalent.Data.Entities;
 using UnoTalent.Service.Mappers.Abstractions;
 using UnoTalent.Service.Models;
@@ -8,10 +9,12 @@ namespace UnoTalent.Service.Mappers
     public class ApplicationMapper : IMapper<Application, ApplicationVm>
     {
         private readonly IMapper<Candidate, CandidateVm> _candidateMapper;
+        private readonly IMapper<Question, QuestionVm> _questionMapper;
 
-        public ApplicationMapper(IMapper<Candidate, CandidateVm> candidateMapper)
+        public ApplicationMapper(IMapper<Candidate, CandidateVm> candidateMapper, IMapper<Question, QuestionVm> questionMapper)
         {
             _candidateMapper = candidateMapper;
+            _questionMapper = questionMapper;
         }
 
         public Application Map(ApplicationVm model)
@@ -32,6 +35,13 @@ namespace UnoTalent.Service.Mappers
             application.Id = entity.Id;
             application.Name = entity.Name;
             application.Questions = new List<QuestionVm>();
+            if (entity.ApplicationQuestions != null)
+            {
+                foreach (var question in entity.ApplicationQuestions)
+                {
+                    application.Questions.Add(_questionMapper.Map(question.Question));
+                }
+            }
 
             if (entity.Candidate != null)
             {
