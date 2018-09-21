@@ -36,10 +36,7 @@ namespace UnoTalent.Service.Mappers
             List<Application> applications = new List<Application>();
             foreach (ApplicationVm application in models)
             {
-                Application newApplication = new Application();
-                newApplication.Id = application.Id;
-                newApplication.Name = application.Name;
-                applications.Add(newApplication);
+                applications.Add(Map(application));
             }
 
             return applications;
@@ -50,10 +47,7 @@ namespace UnoTalent.Service.Mappers
             List<ApplicationVm> applications = new List<ApplicationVm>();
             foreach (Application application in entities)
             {
-                ApplicationVm newApplication = new ApplicationVm();
-                newApplication.Id = application.Id;
-                newApplication.Name = application.Name;
-                applications.Add(newApplication);
+                applications.Add(Map(application));
             }
 
             return applications;

@@ -10,7 +10,12 @@ namespace UnoTalent.Service.Services
     {
         public CandidateService(IMapper<Candidate, CandidateVm> mapper, UnoTalentDbContext context) : base(mapper, context)
         {
+            
+        }
 
+        public override CandidateVm GetById(int id)
+        {
+            return base.GetById(id);
         }
     }
 }

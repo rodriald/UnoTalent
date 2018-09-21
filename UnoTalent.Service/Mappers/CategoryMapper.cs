@@ -10,6 +10,7 @@ namespace UnoTalent.Service.Mappers
         public Category Map(CategoryVm model)
         {
             Category category = new Category();
+            category.Id = model.Id;
             category.Name = model.Name;
             return category;
         }
@@ -19,10 +20,13 @@ namespace UnoTalent.Service.Mappers
             CategoryVm category = new CategoryVm();
             category.Id = entity.Id;
             category.Name = entity.Name;
+            category.Questions = new List<QuestionVm>();
 
-            IMapper<Question, QuestionVm> mapper = new QuestionMapper();
-            category.Questions = mapper.Map(entity.Questions);
-
+            if (entity.Questions != null)
+            {
+                IMapper<Question, QuestionVm> mapper = new QuestionMapper();
+                category.Questions = mapper.Map(entity.Questions);
+            }
             return category;
         }
 
@@ -31,10 +35,7 @@ namespace UnoTalent.Service.Mappers
             List<Category> categories = new List<Category>();
             foreach (CategoryVm category in models)
             {
-                Category newCategory = new Category();
-                newCategory.Id = category.Id;
-                newCategory.Name = category.Name;
-                categories.Add(newCategory);
+                categories.Add(Map(category));
             }
 
             return categories;
@@ -45,10 +46,7 @@ namespace UnoTalent.Service.Mappers
             List<CategoryVm> categories = new List<CategoryVm>();
             foreach (Category category in entities)
             {
-                CategoryVm newCategory = new CategoryVm();
-                newCategory.Id = category.Id;
-                newCategory.Name = category.Name;
-                categories.Add(newCategory);
+                categories.Add(Map(category));
             }
 
             return categories;
