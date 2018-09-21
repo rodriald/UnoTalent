@@ -19,6 +19,11 @@ namespace UnoTalent.Service.Mappers
             Category category = new Category();
             category.Id = model.Id;
             category.Name = model.Name;
+            category.Questions = new List<Question>();
+            if (model.Questions != null)
+            {
+                category.Questions = _questionMapper.Map(model.Questions);
+            }
             return category;
         }
 
